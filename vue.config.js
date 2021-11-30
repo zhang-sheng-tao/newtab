@@ -1,14 +1,14 @@
 const path = require('path')
 
-function resolve(dir) {
+function resolve (dir) {
   return path.join(__dirname, dir)
 }
 module.exports = {
   publicPath: './',
   assetsDir: './',
   productionSourceMap: false,
-  devServer:{
-    https:true
+  devServer: {
+    https: true
   },
   chainWebpack: config => {
     config.resolve.alias
@@ -19,7 +19,7 @@ module.exports = {
     config.plugins.delete('prefetch')
     // 压缩代码
     config.optimization.minimize(true)
-    // 分割代码
+    // 分割代码13123
     config.optimization.splitChunks({
       chunks: 'all'
     })
